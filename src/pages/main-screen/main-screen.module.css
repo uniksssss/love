@@ -1,5 +1,5 @@
 .container {
-  background-image: url("../../assets/back.png");
+  background-image: url("/love/assets/back.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
