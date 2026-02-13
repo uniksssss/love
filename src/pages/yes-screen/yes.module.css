@@ -1,0 +1,174 @@
+.container {
+  background-image: url("../../assets/back.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 40px;
+}
+
+.header {
+  font-size: 48px;
+  color: #ff5776;
+  text-align: center;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 100px);
+  grid-template-rows: repeat(5, 120px);
+  gap: 6px;
+}
+
+.card {
+  perspective: 800px;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  background: linear-gradient(135deg, #ff7a94, #ff5776);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  background: gray;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.winOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 87, 118, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.6s ease;
+  z-index: 10;
+}
+
+.winCard {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ff5776;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.yesButton {
+  background-color: #ff5776;
+  color: #fff9f7;
+  border-radius: 55px;
+  padding: 8px 24px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.heartImage {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.heartImage:hover {
+  transform: scale(1.05);
+}
+
+.heartCard {
+  position: absolute;
+  bottom: 210px;
+  right: 50px;
+  background: #ff5776;
+  color: #fff9f7;
+  padding: 12px 20px;
+  border-radius: 15px;
+  font-size: 18px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: popIn 0.4s ease forwards;
+  z-index: 15;
+}
+
+p{
+  margin: 0px;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

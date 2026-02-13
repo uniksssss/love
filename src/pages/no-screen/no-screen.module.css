@@ -1,0 +1,46 @@
+.container {
+  background-image: url("../../assets/back.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header {
+  font-size: 48px;
+  color: #ff5776;
+  text-align: center;
+  margin: 0;
+}
+
+.cat {
+  width: 90%;
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.yesButton {
+  background-color: #ff5776;
+  color: #fff9f7;
+  border-radius: 55px;
+  padding: 14px 48px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yesButton:hover {
+  box-shadow: 0 0 25px rgb(255, 0, 47);
+  transform: scale(1.05);
+}
