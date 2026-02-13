@@ -27,7 +27,7 @@ export default function MainScreen() {
   };
 
   useEffect(() => {
-    const handleMouseMove = (e: unknown) => {
+    const handleMouseMove = (e: MouseEvent) => {
       const btn = noBtnRef.current;
       if (!btn) return;
 
