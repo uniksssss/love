@@ -60,11 +60,11 @@ export default function MainScreen() {
 
   return (
     <div className={styles.container}>
-      <img src="/assets/we.png" className={styles.weImage} />
+      <img src="/love/assets/we.png" className={styles.weImage} />
       {hearts.map((heart) => (
         <img
           key={heart.id}
-          src="/assets/heart.png"
+          src="/love/assets/heart.png"
           className={styles.flyingHeart}
           style={{
             left: `${heart.left}%`,
@@ -77,7 +77,7 @@ export default function MainScreen() {
 
       <div className={styles.modal}>
         <img
-          src="/assets/heart.png"
+          src="/love/assets/heart.png"
           onClick={spawnHearts}
           className={styles.heartImage}
         />

@@ -113,7 +113,7 @@ export default function YesScreen() {
     <div className={styles.container}>
       <h1 className={styles.header}>Найди пару… как мы нашли друг друга</h1>
       <img
-        src="/assets/heart.png"
+        src="/love/assets/heart.png"
         onClick={() => {
           setShowHeartCard(true);
           setTimeout(() => setShowHeartCard(false), 3000);
@@ -148,7 +148,7 @@ export default function YesScreen() {
               >
                 <div className={styles.front}>
                   <img
-                    src={`/assets/${card.photo}`}
+                    src={`/love/assets/${card.photo}`}
                     alt=""
                     className={styles.image}
                   />
